@@ -240,16 +240,4 @@ Amdahl upper bound = 1 / ((1 - P) + P / N)
 
 Common bottlenecks: memory bandwidth at high thread counts, codec I/O during conversions.
 
-## Contributing
-1. Fork the repository
-2. Create a feature branch (`feature/new-algorithm`)
-3. Add/modify the C++ triple (sequential/pthread/openmp)
-4. Update `compile.ps1` if program names change
-5. Add tests/metrics evidence where possible
-6. Open a Pull Request with a clear summary
 
-## License & Attribution
-Educational/academic use. Attribute this repository when reusing code or architecture. Third‑party libraries retain their licenses.
-
-Author: Srujan Swamy  
-Repository: https://github.com/SrujanSwamy/Parallel-Video-processing
