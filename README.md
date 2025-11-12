@@ -1,606 +1,1210 @@
-# Parallel Video Processing System# Parallel Video Processing System# Parallel Video Processing System# 🎥 Parallel Video Processing System
+# Parallel Video Processing System# Parallel Video Processing System# Parallel Video Processing System# Parallel Video Processing System# 🎥 Parallel Video Processing System
 
 
 
-A full-stack application for parallel video processing using OpenMP, Pthreads, and Sequential implementations. Features a React frontend, Flask backend, and 12 different video processing algorithms implemented in C++.
+A full-stack web application for comparing parallel video processing performance using **Sequential**, **Pthread**, and **OpenMP** implementations across 12 different video processing algorithms.
 
 
 
-## FeaturesA full-stack application for parallel video processing using OpenMP, Pthreads, and Sequential implementations. Features a React frontend, Flask backend, and 12 different video processing algorithms implemented in C++.
+## OverviewA full-stack application for parallel video processing using OpenMP, Pthreads, and Sequential implementations. Features a React frontend, Flask backend, and 12 different video processing algorithms implemented in C++.
 
 
 
-### Video Processing Algorithms
+This application demonstrates the performance benefits of parallel computing in video processing. Built with a React frontend, Flask backend, and C++ processing engines, it provides a comprehensive platform for analyzing and comparing different parallelization strategies on real video data.
 
-1. **Grayscale** - Convert videos to grayscale
 
-2. **Gaussian Blur** - Apply Gaussian blur filter## FeaturesA full-stack application for parallel video processing using OpenMP, Pthreads, and Sequential implementations. Features a React frontend, Flask backend, and 12 different video processing algorithms implemented in C++.A full-stack web application for comparing parallel video processing performance using **Sequential**, **Pthread**, and **OpenMP** implementations across 12 different image/video processing algorithms.
 
-3. **Edge Detection** - Detect edges using Canny algorithm
+**Key Highlights:**## FeaturesA full-stack application for parallel video processing using OpenMP, Pthreads, and Sequential implementations. Features a React frontend, Flask backend, and 12 different video processing algorithms implemented in C++.
 
-4. **White Balance** - Automatic white balance correction
 
-5. **Histogram Equalization** - Enhance image contrast
 
-6. **Frame Sharpening** - Sharpen video frames### Video Processing Algorithms
+- **12 Processing Algorithms**: Complete suite of image and video enhancement techniques
 
-7. **Scene Detection** - Detect scene changes with confidence scores
+- **3 Implementation Types**: Sequential baseline, Pthread, and OpenMP parallel versions
 
-8. **Background Subtraction** - Extract foreground objects1. **Grayscale** - Convert videos to grayscale
+- **Real-time Performance Analysis**: Automatic speedup calculations and efficiency metrics### Video Processing Algorithms
 
-9. **Brightness/Contrast** - Adjust brightness and contrast
+- **Modern Web Interface**: Responsive React dashboard with video comparison and graphs
+
+- **Production-Ready**: RESTful API, automatic video format conversion, and error handling1. **Grayscale** - Convert videos to grayscale
+
+
+
+## Features2. **Gaussian Blur** - Apply Gaussian blur filter## FeaturesA full-stack application for parallel video processing using OpenMP, Pthreads, and Sequential implementations. Features a React frontend, Flask backend, and 12 different video processing algorithms implemented in C++.A full-stack web application for comparing parallel video processing performance using **Sequential**, **Pthread**, and **OpenMP** implementations across 12 different image/video processing algorithms.
+
+
+
+### Video Processing Algorithms3. **Edge Detection** - Detect edges using Canny algorithm
+
+
+
+1. **Grayscale Conversion** - Convert color videos to grayscale4. **White Balance** - Automatic white balance correction
+
+2. **Gaussian Blur** - Apply Gaussian smoothing filter
+
+3. **Edge Detection** - Canny edge detection algorithm5. **Histogram Equalization** - Enhance image contrast
+
+4. **White Balance** - Automatic color correction
+
+5. **Histogram Equalization** - Contrast enhancement6. **Frame Sharpening** - Sharpen video frames### Video Processing Algorithms
+
+6. **Frame Sharpening** - Enhance image sharpness
+
+7. **Scene Detection** - Identify scene changes with confidence scores7. **Scene Detection** - Detect scene changes with confidence scores
+
+8. **Background Subtraction** - Foreground object extraction
+
+9. **Brightness/Contrast Adjustment** - Dynamic range modification8. **Background Subtraction** - Extract foreground objects1. **Grayscale** - Convert videos to grayscale
+
+10. **Motion Blur** - Motion blur effect application
+
+11. **Contrast Enhancement** - Local contrast improvement9. **Brightness/Contrast** - Adjust brightness and contrast
+
+12. **Lightup** - Brighten underexposed videos
 
 10. **Motion Blur** - Apply motion blur effect2. **Gaussian Blur** - Apply Gaussian blur filter##  Features##  Table of Contents
 
+### Parallel Implementations
+
 11. **Contrast Enhancement** - Enhance local contrast
-
-12. **Lightup** - Brighten dark videos3. **Edge Detection** - Detect edges using Canny algorithm
-
-
-
-### Parallel Implementations4. **White Balance** - Automatic white balance correction- [Features](#features)
 
 Each algorithm is implemented in three ways:
 
-- **Sequential** - Single-threaded baseline implementation5. **Histogram Equalization** - Enhance image contrast
+12. **Lightup** - Brighten dark videos3. **Edge Detection** - Detect edges using Canny algorithm
 
-- **Pthreads** - Multi-threaded using POSIX threads
+- **Sequential** - Single-threaded baseline for performance comparison
+
+- **Pthread** - Multi-threaded implementation using POSIX threads with manual thread management
+
+- **OpenMP** - Multi-threaded implementation using OpenMP directives with automatic parallelization
+
+### Parallel Implementations4. **White Balance** - Automatic white balance correction- [Features](#features)
+
+### Performance Metrics
+
+Each algorithm is implemented in three ways:
+
+- **Execution Time** - Wall-clock time for each implementation
+
+- **Speedup** - Sequential time divided by parallel time- **Sequential** - Single-threaded baseline implementation5. **Histogram Equalization** - Enhance image contrast
+
+- **Frames Per Second (FPS)** - Processing throughput
+
+- **Parallel Efficiency** - Speedup divided by number of threads- **Pthreads** - Multi-threaded using POSIX threads
+
+- **Thread Utilization** - Resource usage analysis
 
 - **OpenMP** - Multi-threaded using OpenMP directives6. **Frame Sharpening** - Sharpen video frames### Video Processing Algorithms- [Tech Stack](#tech-stack)
 
+### User Experience
 
 
-### Performance Metrics7. **Scene Detection** - Detect scene changes with confidence scores
 
-- Execution time for each implementation
+- **Video Upload** - Support for MP4 and AVI formats
+
+- **Real-time Progress** - Live status updates during processing### Performance Metrics7. **Scene Detection** - Detect scene changes with confidence scores
+
+- **Side-by-side Comparison** - View input and output videos simultaneously
+
+- **Interactive Charts** - Visualize performance metrics with Recharts- Execution time for each implementation
+
+- **Result Export** - Download processed videos and performance data
 
 - Speedup calculations (Sequential time / Parallel time)8. **Background Subtraction** - Extract foreground objects1. **Grayscale** - Convert videos to grayscale- [Project Structure](#project-structure)
 
+## Tech Stack
+
 - Frames per second (FPS)
+
+### Backend
 
 - Parallel efficiency9. **Brightness/Contrast** - Adjust brightness and contrast
 
-- Thread utilization
+- **Python 3.11.9** - Core language
 
-10. **Motion Blur** - Apply motion blur effect2. **Gaussian Blur** - Apply Gaussian blur filter- [Prerequisites](#prerequisites)
+- **Flask 3.0.0** - Lightweight web framework- Thread utilization
+
+- **Flask-CORS 4.0.0** - Cross-Origin Resource Sharing
+
+- **OpenCV 4.10.0.84** - Video processing and format conversion10. **Motion Blur** - Apply motion blur effect2. **Gaussian Blur** - Apply Gaussian blur filter- [Prerequisites](#prerequisites)
+
+- **RESTful API** - 9 endpoints for upload, processing, and results
 
 ## Prerequisites
 
-11. **Contrast Enhancement** - Enhance local contrast
-
-### Backend Requirements
-
-- Python 3.11.9 or higher12. **Lightup** - Brighten dark videos3. **Edge Detection** - Detect edges using Canny algorithm- [Installation](#installation)
-
-- OpenCV 4.10.0.84
-
-- Flask 3.0.0
-
-- MSYS2 UCRT64 environment with g++ 13.2.0
-
-### Parallel Implementations4. **White Balance** - Automatic white balance correction- [Usage](#usage)
-
-### Frontend Requirements
-
-- Node.js 16.x or higherEach algorithm is implemented in three ways:
-
-- npm or yarn
-
-- **Sequential** - Single-threaded baseline implementation5. **Histogram Equalization** - Enhance image contrast- [Processing Features](#processing-features)
-
-### C++ Compiler
-
-- g++ with OpenMP support- **Pthreads** - Multi-threaded using POSIX threads
-
-- pthread library
-
-- OpenCV 4.x development files- **OpenMP** - Multi-threaded using OpenMP directives6. **Frame Sharpening** - Sharpen video frames- [Performance Metrics](#performance-metrics)
-
-
-
-## Installation
-
-
-
-### 1. Clone the Repository### Performance Metrics7. **Scene Detection** - Detect scene changes with confidence scores- [Architecture](#architecture)
-
-```bash
-
-git clone <repository-url>- Execution time for each implementation
-
-cd parallel_analysis-master
-
-```- Speedup calculations (Sequential time / Parallel time)8. **Background Subtraction** - Extract foreground objects- [Contributing](#contributing)
-
-
-
-### 2. Backend Setup- Frames per second (FPS)
-
-```bash
-
-cd backend- Parallel efficiency9. **Brightness/Contrast** - Adjust brightness and contrast
-
-pip install -r requirements.txt
-
-```- Thread utilization
-
-
-
-**Required Python packages:**10. **Motion Blur** - Apply motion blur effect##  Features
-
-- Flask==3.0.0
-
-- flask-cors==4.0.0## Prerequisites
-
-- opencv-python==4.10.0.84
+### Frontend
 
 11. **Contrast Enhancement** - Enhance local contrast
 
-### 3. Frontend Setup
+- **React 18.2.0** - UI framework
 
-```bash### Backend Requirements
+- **TypeScript** - Type-safe JavaScript### Backend Requirements
 
-cd frontend
+- **Tailwind CSS** - Utility-first styling
 
-npm install- Python 3.11.9 or higher12. **Lightup** - Brighten dark videos- **12 Video Processing Algorithms**
+- **Axios** - HTTP client for API requests- Python 3.11.9 or higher12. **Lightup** - Brighten dark videos3. **Edge Detection** - Detect edges using Canny algorithm- [Installation](#installation)
 
-```
+- **Recharts** - Data visualization library
 
-- OpenCV 4.10.0.84
-
-**Key dependencies:**
-
-- React 18.2.0- Flask 3.0.0  - Grayscale Conversion
-
-- TypeScript
-
-- Tailwind CSS- MSYS2 UCRT64 environment with g++ 13.2.0
-
-- Axios for API calls
-
-- Recharts for performance graphs### Parallel Implementations  - Gaussian Blur
+- **Vite** - Modern build tool- OpenCV 4.10.0.84
 
 
 
-### 4. Compile C++ Programs### Frontend Requirements
+### C++ Processing Engine- Flask 3.0.0
 
-From the root directory:
 
-```powershell- Node.js 16.x or higherEach algorithm is implemented in three ways:  - Edge Detection (Sobel)
 
-.\compile.ps1
+- **g++ 13.2.0** - Compiler (MSYS2 UCRT64)- MSYS2 UCRT64 environment with g++ 13.2.0
+
+- **OpenCV 4.x** - Computer vision library
+
+- **OpenMP** - Parallel programming API### Parallel Implementations4. **White Balance** - Automatic white balance correction- [Usage](#usage)
+
+- **pthread** - POSIX threads library
+
+- **MJPEG/MP4** - Video codecs### Frontend Requirements
+
+
+
+## Project Structure- Node.js 16.x or higherEach algorithm is implemented in three ways:
+
+
 
 ```- npm or yarn
 
-
-
-This compiles all 36 C++ programs (12 features × 3 implementations) and places executables in the `build/` directory.- **Sequential** - Single-threaded baseline implementation  - White Balance
-
-
-
-## Running the Application### C++ Compiler
-
-
-
-### Quick Start (Recommended)- g++ with OpenMP support- **Pthreads** - Multi-threaded using POSIX threads  - Histogram Equalization
-
-From the root directory:
-
-```powershell- pthread library
-
-.\start-app.ps1
-
-```- OpenCV 4.x development files- **OpenMP** - Multi-threaded using OpenMP directives  - Frame Sharpening
-
-
-
-This script:
-
-1. Starts the Flask backend on http://localhost:5000
-
-2. Starts the React frontend on http://localhost:3000## Installation  - Scene Detection
-
-3. Opens your default browser automatically
-
-
-
-### Manual Start
-
-### 1. Clone the Repository### Performance Metrics  - Background Subtraction
-
-**Backend:**
-
-```bash```bash
-
-cd backend
-
-python app.pygit clone <repository-url>- Execution time for each implementation  - Brightness/Contrast Adjustment
-
-```
-
-cd parallel_analysis-master
-
-**Frontend:**
-
-```bash```- Speedup calculations (Sequential time / Parallel time)  - Motion Blur Reduction
-
-cd frontend
-
-npm start
-
-```
-
-### 2. Backend Setup- Frames per second (FPS)  - Contrast Enhancement
-
-## Usage
-
-```bash
-
-1. **Upload Video**: Click "Choose Video" and select an MP4 or AVI file
-
-2. **Select Feature**: Choose from the dropdown menu (e.g., Grayscale, Edge Detection)cd backend- Parallel efficiency  - Light Enhancement
-
-3. **Set Thread Count**: Specify number of threads for Pthread/OpenMP (default: 4)
-
-4. **Process**: Click "Process Video" to start processingpip install -r requirements.txt
-
-5. **View Results**: 
-
-   - Watch input and output videos side by side```- Thread utilization
-
-   - Compare Sequential, Pthread, and OpenMP performance
-
-   - Analyze speedup graphs and metrics
-
-
-
-### Special Cases**Required Python packages:**- **Three Parallel Implementations**
-
-
-
-**Scene Detection**: Outputs frame numbers and timestamps of detected scene changes instead of a processed video.- Flask==3.0.0
-
-
-
-**Large Videos**: Processing time depends on video length and selected feature. Progress updates appear in real-time.- flask-cors==4.0.0##  Prerequisites  - Sequential (baseline)
-
-
-
-## Project Structure- opencv-python==4.10.0.84
-
-
-
-```  - Pthread (POSIX threads)
-
 parallel_analysis-master/
 
-├── backend/                    # Flask API server### 3. Frontend Setup
+├── backend/                        # Flask API server- **Sequential** - Single-threaded baseline implementation5. **Histogram Equalization** - Enhance image contrast- [Processing Features](#processing-features)
 
-│   ├── app.py                 # Main Flask application (9 endpoints)
+│   ├── app.py                     # Main Flask application (9 endpoints)
 
-│   ├── video_processor.py     # Video processing orchestration```bash### Backend Requirements  - OpenMP (Open Multi-Processing)
+│   ├── requirements.txt           # Python dependencies### C++ Compiler
 
-│   ├── video_converter.py     # AVI to MP4 conversion
+│   └── utils/
 
-│   ├── results_parser.py      # Parse C++ execution resultscd frontend
+│       ├── video_processor.py     # Video processing orchestration- g++ with OpenMP support- **Pthreads** - Multi-threaded using POSIX threads
 
-│   └── requirements.txt
+│       ├── video_converter.py     # AVI to MP4 conversion
 
-├── frontend/                   # React web applicationnpm install- Python 3.11.9 or higher
+│       └── results_parser.py      # Parse C++ execution results- pthread library
+
+│
+
+├── frontend/                       # React web application- OpenCV 4.x development files- **OpenMP** - Multi-threaded using OpenMP directives6. **Frame Sharpening** - Sharpen video frames- [Performance Metrics](#performance-metrics)
 
 │   ├── src/
 
-│   │   ├── App.tsx            # Main component with state management```
+│   │   ├── App.tsx                # Main component with state management
 
-│   │   ├── components/        # React components
+│   │   ├── types.ts               # TypeScript interfaces
 
-│   │   │   ├── ConfigPanel.tsx- OpenCV 4.10.0.84- **Web-Based Interface**
+│   │   └── components/## Installation
 
-│   │   │   ├── ProcessingStatus.tsx
+│   │       ├── ConfigPanel.tsx           # Upload and configuration
 
-│   │   │   ├── VideoComparison.tsx**Key dependencies:**
+│   │       ├── ProcessingStatus.tsx      # Progress indicator
 
-│   │   │   ├── PerformanceMetrics.tsx
+│   │       ├── VideoComparison.tsx       # Video players
 
-│   │   │   ├── SpeedupChart.tsx- React 18.2.0- Flask 3.0.0  - Upload videos
+│   │       ├── VideoPlayer.tsx           # Individual video player### 1. Clone the Repository### Performance Metrics7. **Scene Detection** - Detect scene changes with confidence scores- [Architecture](#architecture)
 
-│   │   │   └── SceneDetectionResults.tsx
+│   │       ├── PerformanceMetrics.tsx    # Metrics table
 
-│   │   └── types.ts           # TypeScript interfaces- TypeScript
+│   │       ├── SpeedupChart.tsx          # Bar chart visualization```bash
 
-│   └── package.json
+│   │       └── SceneDetectionResults.tsx # Text results display
 
-├── src/                        # C++ source code- Tailwind CSS- MSYS2 UCRT64 environment with g++ 13.2.0  - Select processing features
+│   ├── package.jsongit clone <repository-url>- Execution time for each implementation
 
-│   ├── 01_grayscale/
+│   └── tailwind.config.js
 
-│   ├── 02_gaussian_blur/- Axios for API calls
+│cd parallel_analysis-master
 
-│   ├── 03_edge_detection/
+├── src/                            # C++ source code (12 features)
 
-│   ├── 04_white_balance/- Recharts for performance graphs  - Configure thread counts
+│   ├── 01_grayscale/```- Speedup calculations (Sequential time / Parallel time)8. **Background Subtraction** - Extract foreground objects- [Contributing](#contributing)
 
-│   ├── 05_histogram_equalization/
+│   │   ├── grayscale_sequential.cpp
+
+│   │   ├── grayscale_pthread.cpp
+
+│   │   ├── grayscale_openmp.cpp
+
+│   │   └── run_grayscale.ps1### 2. Backend Setup- Frames per second (FPS)
+
+│   ├── 02_gaussian_blur/
+
+│   ├── 03_edge_detection/```bash
+
+│   ├── 04_white_balance/
+
+│   ├── 05_histogram_equalization/cd backend- Parallel efficiency9. **Brightness/Contrast** - Adjust brightness and contrast
 
 │   ├── 06_frame_sharpening/
 
-│   ├── 07_scene_detection/
+│   ├── 07_scene_detection/pip install -r requirements.txt
 
-│   ├── 08_background_subtraction/### 4. Compile C++ Programs### Frontend Requirements  - Real-time progress tracking
+│   ├── 08_background_subtraction/
 
-│   ├── 09_brightness_contrast/
+│   ├── 09_brightness_contrast/```- Thread utilization
 
-│   ├── 10_motion_blur_reduction/From the root directory:
+│   ├── 10_motion_blur_reduction/
 
 │   ├── 11_contrast_enhancement/
 
-│   └── 12_lightup/```powershell- Node.js 16.x or higher  - Side-by-side video comparison
+│   └── 12_lightup/
 
-├── build/                      # Compiled C++ executables (36 files)
+│**Required Python packages:**10. **Motion Blur** - Apply motion blur effect##  Features
 
-├── input_videos/               # User-uploaded videos.\compile.ps1
+├── build/                          # Compiled executables (36 files)
 
-├── outputs/                    # Processed video outputs
+├── input_videos/                   # User uploads (ignored by git)- Flask==3.0.0
 
-├── results/                    # Performance logs and graphs```- npm or yarn  - Performance metrics and graphs
+├── outputs/                        # Processed videos (ignored by git)
 
-├── compile.ps1                 # Compilation script
+├── results/                        # Performance logs (ignored by git)- flask-cors==4.0.0## Prerequisites
 
-├── start-app.ps1               # Application launcher
+│
 
-├── clean-repo.ps1              # Repository cleanup utility
+├── compile.ps1                     # C++ compilation script- opencv-python==4.10.0.84
 
-└── .gitignore                  # Git ignore rulesThis compiles all 36 C++ programs (12 features × 3 implementations) and places executables in the `build/` directory.
+├── start-app.ps1                   # Application launcher
+
+├── clean-repo.ps1                  # Cleanup utility11. **Contrast Enhancement** - Enhance local contrast
+
+└── .gitignore                      # Git ignore rules
+
+```### 3. Frontend Setup
+
+
+
+## Setup and Installation```bash### Backend Requirements
+
+
+
+### Prerequisitescd frontend
+
+
+
+- **Python 3.11.9+** and pipnpm install- Python 3.11.9 or higher12. **Lightup** - Brighten dark videos- **12 Video Processing Algorithms**
+
+- **Node.js 16+** and npm
+
+- **MSYS2 UCRT64** environment (Windows)```
+
+- **g++ 13.2.0+** with OpenMP support
+
+- **OpenCV 4.x** development files- OpenCV 4.10.0.84
+
+
+
+### 1. Clone the Repository**Key dependencies:**
+
+
+
+```bash- React 18.2.0- Flask 3.0.0  - Grayscale Conversion
+
+git clone https://github.com/SrujanSwamy/Parallel-Video-processing.git
+
+cd parallel_analysis-master- TypeScript
 
 ```
 
+- Tailwind CSS- MSYS2 UCRT64 environment with g++ 13.2.0
+
+### 2. Backend Setup
+
+- Axios for API calls
+
+```bash
+
+# Navigate to backend directory- Recharts for performance graphs### Parallel Implementations  - Gaussian Blur
+
+cd backend
 
 
-## API Endpoints
 
-## Running the Application### C++ Compiler- **Comprehensive Metrics**
+# Install Python dependencies
 
-### Backend API (Flask)
+pip install -r requirements.txt### 4. Compile C++ Programs### Frontend Requirements
 
-- `POST /api/upload` - Upload video file
 
-- `POST /api/process` - Start video processing
 
-- `GET /api/status/<job_id>` - Get processing status### Quick Start (Recommended)- g++ with OpenMP support  - Execution time
+# Verify installationsFrom the root directory:
 
-- `GET /api/results/<job_id>` - Get performance metrics
+python -c "import flask; import cv2; print('Backend ready')"
 
-- `GET /api/video/<job_id>/<method>/<video_type>` - Stream videoFrom the root directory:
+``````powershell- Node.js 16.x or higherEach algorithm is implemented in three ways:  - Edge Detection (Sobel)
 
-- `GET /api/scene/<job_id>/<scene_type>` - Get scene detection results
 
-- `DELETE /api/cleanup/<job_id>` - Cleanup job files```powershell- pthread library  - Frames per second (FPS)
 
-- `GET /api/health` - Health check endpoint
+**Required Python packages:**.\compile.ps1
 
-.\start-app.ps1
+- Flask==3.0.0
 
-## Algorithm Details
+- flask-cors==4.0.0```- npm or yarn
 
-```- OpenCV 4.x development files  - Speedup calculation
+- opencv-python==4.10.0.84
 
-### Scene Detection
 
-Uses a multi-metric approach:
 
-- **Histogram Correlation**: Compares color distribution between frames
+### 3. Frontend Setup
 
-- **Edge Detection**: Analyzes structural changes using Canny edge detectionThis script:  - Parallel efficiency
+This compiles all 36 C++ programs (12 features × 3 implementations) and places executables in the `build/` directory.- **Sequential** - Single-threaded baseline implementation  - White Balance
 
-- **Pixel Difference**: Measures absolute pixel value changes
+```bash
+
+# Navigate to frontend directory
+
+cd frontend
+
+## Running the Application### C++ Compiler
+
+# Install Node.js dependencies
+
+npm install
+
+
+
+# Verify installation### Quick Start (Recommended)- g++ with OpenMP support- **Pthreads** - Multi-threaded using POSIX threads  - Histogram Equalization
+
+npm list react
+
+```From the root directory:
+
+
+
+**Key dependencies:**```powershell- pthread library
+
+- React 18.2.0
+
+- TypeScript.\start-app.ps1
+
+- Tailwind CSS
+
+- Axios```- OpenCV 4.x development files- **OpenMP** - Multi-threaded using OpenMP directives  - Frame Sharpening
+
+- Recharts
+
+
+
+### 4. Compile C++ Programs
+
+This script:
+
+From the root directory:
 
 1. Starts the Flask backend on http://localhost:5000
 
-Thresholds:
+```powershell
 
-- Histogram: 0.70 (lower = more different)2. Starts the React frontend on http://localhost:3000## 🔧 Installation  - Interactive performance charts
+# Compile all 36 C++ programs (12 features × 3 implementations)2. Starts the React frontend on http://localhost:3000## Installation  - Scene Detection
 
-- Edge: 0.30 (higher = more different)
+.\compile.ps1
 
-- Pixel: 25.0 (normalized difference)3. Opens your default browser automatically
+3. Opens your default browser automatically
 
-- Minimum gap between scenes: 15 frames
+# Executables will be placed in build/ directory
 
-
-
-Output includes frame number, timestamp, and confidence score.
-
-### Manual Start
-
-### Performance Optimization
-
-- **OpenMP**: Loop-level parallelization with dynamic scheduling### 1. Clone the Repository## 🛠️ Tech Stack
-
-- **Pthreads**: Frame-chunk distribution across threads
-
-- **Sequential**: Optimized baseline for comparison**Backend:**
+```
 
 
 
-## Maintenance```bash```bash
+**Note:** Ensure MSYS2 UCRT64 is in your PATH:### Manual Start
 
 
 
-### Clean Repositorycd backend
+```bash### 1. Clone the Repository### Performance Metrics  - Background Subtraction
+
+# Install required packages
+
+pacman -S mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-opencv**Backend:**
+
+```
+
+```bash```bash
+
+### 5. Running the Application
+
+cd backend
+
+#### Quick Start (Recommended)
+
+python app.pygit clone <repository-url>- Execution time for each implementation  - Brightness/Contrast Adjustment
 
 ```powershell
 
+# From root directory```
+
+.\start-app.ps1
+
+cd parallel_analysis-master
+
+# This script will:
+
+# 1. Start Flask backend on http://localhost:5000**Frontend:**
+
+# 2. Start React frontend on http://localhost:3000
+
+# 3. Open browser automatically```bash```- Speedup calculations (Sequential time / Parallel time)  - Motion Blur Reduction
+
+```
+
+cd frontend
+
+#### Manual Start
+
+npm start
+
+**Terminal 1 - Backend:**
+
+```bash```
+
+cd backend
+
+python app.py### 2. Backend Setup- Frames per second (FPS)  - Contrast Enhancement
+
+# Backend API available at http://localhost:5000/api
+
+```## Usage
+
+
+
+**Terminal 2 - Frontend:**```bash
+
+```bash
+
+cd frontend1. **Upload Video**: Click "Choose Video" and select an MP4 or AVI file
+
+npm start
+
+# Frontend UI available at http://localhost:30002. **Select Feature**: Choose from the dropdown menu (e.g., Grayscale, Edge Detection)cd backend- Parallel efficiency  - Light Enhancement
+
+```
+
+3. **Set Thread Count**: Specify number of threads for Pthread/OpenMP (default: 4)
+
+## Usage Guide
+
+4. **Process**: Click "Process Video" to start processingpip install -r requirements.txt
+
+### 1. Upload Video
+
+5. **View Results**: 
+
+1. Navigate to http://localhost:3000
+
+2. Click **Choose Video** button   - Watch input and output videos side by side```- Thread utilization
+
+3. Select MP4 or AVI file (max recommended: 100MB)
+
+4. File uploads to backend `/api/upload` endpoint   - Compare Sequential, Pthread, and OpenMP performance
+
+
+
+### 2. Configure Processing   - Analyze speedup graphs and metrics
+
+
+
+1. **Select Feature** - Choose from dropdown (e.g., Grayscale, Edge Detection)
+
+2. **Set Thread Count** - Specify threads for Pthread/OpenMP (default: 4, range: 1-16)
+
+3. **Review Settings** - Confirm feature and thread configuration### Special Cases**Required Python packages:**- **Three Parallel Implementations**
+
+
+
+### 3. Start Processing
+
+
+
+1. Click **Process Video** button**Scene Detection**: Outputs frame numbers and timestamps of detected scene changes instead of a processed video.- Flask==3.0.0
+
+2. Backend executes three implementations sequentially:
+
+   - Sequential (baseline)
+
+   - Pthread (with specified thread count)
+
+   - OpenMP (with specified thread count)**Large Videos**: Processing time depends on video length and selected feature. Progress updates appear in real-time.- flask-cors==4.0.0##  Prerequisites  - Sequential (baseline)
+
+3. Progress updates every 2 seconds via HTTP polling
+
+
+
+### 4. View Results
+
+## Project Structure- opencv-python==4.10.0.84
+
+#### Video Comparison
+
+- **Input Video** - Original uploaded video
+
+- **Sequential Output** - Single-threaded result
+
+- **Pthread Output** - Multi-threaded (Pthread) result```  - Pthread (POSIX threads)
+
+- **OpenMP Output** - Multi-threaded (OpenMP) result
+
+parallel_analysis-master/
+
+#### Performance Metrics Table
+
+| Metric | Sequential | Pthread | OpenMP |├── backend/                    # Flask API server### 3. Frontend Setup
+
+|--------|-----------|---------|---------|
+
+| Execution Time | Baseline | Reduced | Reduced |│   ├── app.py                 # Main Flask application (9 endpoints)
+
+| Speedup | 1.00x | 2-4x | 2-4x |
+
+| FPS | Baseline | Higher | Higher |│   ├── video_processor.py     # Video processing orchestration```bash### Backend Requirements  - OpenMP (Open Multi-Processing)
+
+| Efficiency | N/A | 50-80% | 50-80% |
+
+│   ├── video_converter.py     # AVI to MP4 conversion
+
+#### Speedup Chart
+
+- Bar chart comparing speedup values│   ├── results_parser.py      # Parse C++ execution resultscd frontend
+
+- X-axis: Implementation type
+
+- Y-axis: Speedup ratio│   └── requirements.txt
+
+
+
+### 5. Special Case - Scene Detection├── frontend/                   # React web applicationnpm install- Python 3.11.9 or higher
+
+
+
+Scene Detection outputs **text results** instead of processed video:│   ├── src/
+
+
+
+- **Frame Numbers** - Detected scene change frames│   │   ├── App.tsx            # Main component with state management```
+
+- **Timestamps** - Time position in video
+
+- **Confidence Scores** - Detection confidence (0-100%)│   │   ├── components/        # React components
+
+- **Metrics** - Histogram, edge, and pixel difference analysis
+
+│   │   │   ├── ConfigPanel.tsx- OpenCV 4.10.0.84- **Web-Based Interface**
+
+**Detection Thresholds:**
+
+- Histogram Correlation: 0.70 (lower = more different)│   │   │   ├── ProcessingStatus.tsx
+
+- Edge Difference: 0.30 (higher = more different)
+
+- Pixel Difference: 25.0 (normalized)│   │   │   ├── VideoComparison.tsx**Key dependencies:**
+
+- Minimum Scene Gap: 15 frames
+
+│   │   │   ├── PerformanceMetrics.tsx
+
+### 6. Cleanup
+
+│   │   │   ├── SpeedupChart.tsx- React 18.2.0- Flask 3.0.0  - Upload videos
+
+```powershell
+
+# Remove all generated files│   │   │   └── SceneDetectionResults.tsx
+
+.\clean-repo.ps1
+
+│   │   └── types.ts           # TypeScript interfaces- TypeScript
+
+# This removes:
+
+# - Compiled executables (build/*.exe)│   └── package.json
+
+# - Uploaded videos (input_videos/*.mp4)
+
+# - Processed outputs (outputs/**/*.mp4)├── src/                        # C++ source code- Tailwind CSS- MSYS2 UCRT64 environment with g++ 13.2.0  - Select processing features
+
+# - Performance logs (results/*.txt)
+
+# - Python cache (__pycache__)│   ├── 01_grayscale/
+
+```
+
+│   ├── 02_gaussian_blur/- Axios for API calls
+
+## API Endpoints
+
+│   ├── 03_edge_detection/
+
+### Backend API (Flask)
+
+│   ├── 04_white_balance/- Recharts for performance graphs  - Configure thread counts
+
+```
+
+POST   /api/upload                              - Upload video file│   ├── 05_histogram_equalization/
+
+POST   /api/process                             - Start video processing
+
+GET    /api/status/<job_id>                     - Get processing status│   ├── 06_frame_sharpening/
+
+GET    /api/results/<job_id>                    - Get performance metrics
+
+GET    /api/video/<job_id>/<method>/<type>      - Stream processed video│   ├── 07_scene_detection/
+
+GET    /api/scene/<job_id>/<scene_type>         - Get scene detection text
+
+DELETE /api/cleanup/<job_id>                    - Cleanup job files│   ├── 08_background_subtraction/### 4. Compile C++ Programs### Frontend Requirements  - Real-time progress tracking
+
+GET    /api/health                              - Health check
+
+GET    /api/features                            - List available features│   ├── 09_brightness_contrast/
+
+```
+
+│   ├── 10_motion_blur_reduction/From the root directory:
+
+**Example Request:**
+
+│   ├── 11_contrast_enhancement/
+
+```bash
+
+# Upload video│   └── 12_lightup/```powershell- Node.js 16.x or higher  - Side-by-side video comparison
+
+curl -X POST -F "video=@input.mp4" http://localhost:5000/api/upload
+
+├── build/                      # Compiled C++ executables (36 files)
+
+# Start processing
+
+curl -X POST http://localhost:5000/api/process \├── input_videos/               # User-uploaded videos.\compile.ps1
+
+  -H "Content-Type: application/json" \
+
+  -d '{"job_id": "abc123", "feature": "Grayscale", "num_threads": 4}'├── outputs/                    # Processed video outputs
+
+
+
+# Get results├── results/                    # Performance logs and graphs```- npm or yarn  - Performance metrics and graphs
+
+curl http://localhost:5000/api/results/abc123
+
+```├── compile.ps1                 # Compilation script
+
+
+
+**Example Response:**├── start-app.ps1               # Application launcher
+
+
+
+```json├── clean-repo.ps1              # Repository cleanup utility
+
+{
+
+  "sequential": {└── .gitignore                  # Git ignore rulesThis compiles all 36 C++ programs (12 features × 3 implementations) and places executables in the `build/` directory.
+
+    "execution_time": 12.45,
+
+    "fps": 24.5,```
+
+    "output_video": "grayscale_sequential.mp4"
+
+  },
+
+  "pthread": {
+
+    "execution_time": 4.23,## API Endpoints
+
+    "fps": 72.1,
+
+    "speedup": 2.94,## Running the Application### C++ Compiler- **Comprehensive Metrics**
+
+    "efficiency": 73.5,
+
+    "output_video": "grayscale_pthread.mp4"### Backend API (Flask)
+
+  },
+
+  "openmp": {- `POST /api/upload` - Upload video file
+
+    "execution_time": 3.87,
+
+    "fps": 78.8,- `POST /api/process` - Start video processing
+
+    "speedup": 3.22,
+
+    "efficiency": 80.5,- `GET /api/status/<job_id>` - Get processing status### Quick Start (Recommended)- g++ with OpenMP support  - Execution time
+
+    "output_video": "grayscale_openmp.mp4"
+
+  }- `GET /api/results/<job_id>` - Get performance metrics
+
+}
+
+```- `GET /api/video/<job_id>/<method>/<video_type>` - Stream videoFrom the root directory:
+
+
+
+## Algorithm Details- `GET /api/scene/<job_id>/<scene_type>` - Get scene detection results
+
+
+
+### Scene Detection Implementation- `DELETE /api/cleanup/<job_id>` - Cleanup job files```powershell- pthread library  - Frames per second (FPS)
+
+
+
+**Multi-Metric Approach:**- `GET /api/health` - Health check endpoint
+
+
+
+1. **Histogram Correlation** - Compares color distribution between consecutive frames using correlation coefficient.\start-app.ps1
+
+2. **Edge Detection** - Analyzes structural changes using Canny edge detection and edge density comparison
+
+3. **Pixel Difference** - Measures absolute pixel value changes frame-to-frame## Algorithm Details
+
+
+
+**Implementation:**```- OpenCV 4.x development files  - Speedup calculation
+
+
+
+```cpp### Scene Detection
+
+// Pseudo-code for scene detection
+
+for each frame i from 1 to N-1:Uses a multi-metric approach:
+
+    hist_corr = compareHist(frame[i], frame[i+1], HISTCMP_CORREL)
+
+    edge_diff = computeEdgeDifference(frame[i], frame[i+1])- **Histogram Correlation**: Compares color distribution between frames
+
+    pixel_diff = computePixelDifference(frame[i], frame[i+1])
+
+    - **Edge Detection**: Analyzes structural changes using Canny edge detectionThis script:  - Parallel efficiency
+
+    if (hist_corr < 0.70 && edge_diff > 0.30 && pixel_diff > 25.0):
+
+        if (i - last_scene_frame > 15):- **Pixel Difference**: Measures absolute pixel value changes
+
+            mark_as_scene_change(i)
+
+            confidence = calculate_confidence(hist_corr, edge_diff, pixel_diff)1. Starts the Flask backend on http://localhost:5000
+
+```
+
+Thresholds:
+
+### Parallelization Strategies
+
+- Histogram: 0.70 (lower = more different)2. Starts the React frontend on http://localhost:3000## 🔧 Installation  - Interactive performance charts
+
+#### OpenMP Approach
+
+- **Loop-level Parallelization** - `#pragma omp parallel for` on frame processing loops- Edge: 0.30 (higher = more different)
+
+- **Dynamic Scheduling** - `schedule(dynamic)` for load balancing
+
+- **Automatic Thread Management** - Runtime determines optimal thread distribution- Pixel: 25.0 (normalized difference)3. Opens your default browser automatically
+
+
+
+```cpp- Minimum gap between scenes: 15 frames
+
+#pragma omp parallel for schedule(dynamic)
+
+for (int i = 0; i < total_frames; i++) {
+
+    process_frame(frames[i]);
+
+}Output includes frame number, timestamp, and confidence score.
+
+```
+
+### Manual Start
+
+#### Pthread Approach
+
+- **Frame-chunk Distribution** - Divide frames into equal chunks per thread### Performance Optimization
+
+- **Manual Thread Creation** - Explicit `pthread_create()` and `pthread_join()`
+
+- **Shared Memory** - Frame buffer shared between threads with synchronization- **OpenMP**: Loop-level parallelization with dynamic scheduling### 1. Clone the Repository## 🛠️ Tech Stack
+
+
+
+```cpp- **Pthreads**: Frame-chunk distribution across threads
+
+pthread_t threads[NUM_THREADS];
+
+for (int i = 0; i < NUM_THREADS; i++) {- **Sequential**: Optimized baseline for comparison**Backend:**
+
+    thread_data[i] = {start_frame, end_frame, frames};
+
+    pthread_create(&threads[i], NULL, process_chunk, &thread_data[i]);
+
+}
+
+for (int i = 0; i < NUM_THREADS; i++) {## Maintenance```bash```bash
+
+    pthread_join(threads[i], NULL);
+
+}
+
+```
+
+### Clean Repositorycd backend
+
+## Configuration
+
+```powershell
+
+### Thread Count Guidelines
+
 .\clean-repo.ps1python app.pygit clone <repository-url>### Backend
 
-```
+- **Default**: 4 threads
 
-```
+- **Recommended**: Number of physical CPU cores```
 
-Removes:
+- **Range**: 1-16 threads
 
-- Build artifacts (executables, object files)cd parallel_analysis-master- **Python 3.11+** - API server
+- **Optimal**: Test different values for your hardware```
+
+
+
+**Performance Notes:**Removes:
+
+- Speedup is not linear due to overhead and memory bandwidth
+
+- Efficiency decreases as thread count increases (Amdahl's Law)- Build artifacts (executables, object files)cd parallel_analysis-master- **Python 3.11+** - API server
+
+- Hyper-threading may not provide additional benefit
 
 - Temporary files and logs
 
+### Video Format Support
+
 - Generated videos in input_videos/ and outputs/**Frontend:**
 
-- Python cache files
+| Format | Input | Processing | Output |
 
-- Node modules (optional)```bash```- **Flask 3.0** - Web framework
+|--------|-------|-----------|---------|- Python cache files
+
+| MP4 | ✓ | Converted to AVI | ✓ (mp4v codec) |
+
+| AVI | ✓ | MJPEG codec | ✓ (converted to MP4) |- Node modules (optional)```bash```- **Flask 3.0** - Web framework
+
+| MOV | ✗ | N/A | ✗ |
+
+| MKV | ✗ | N/A | ✗ |
 
 
 
-## Configurationcd frontend
+**Conversion Pipeline:**## Configurationcd frontend
+
+1. User uploads MP4/AVI
+
+2. C++ processes as AVI (MJPEG)
+
+3. Python converts output to MP4 (mp4v)
+
+4. Browser streams MP4 with range requests### Thread Countnpm start- **OpenCV 4.x** - Video processing
 
 
 
-### Thread Countnpm start- **OpenCV 4.x** - Video processing
+## Troubleshooting- Default: 4 threads
 
-- Default: 4 threads
 
-- Recommended: Number of CPU cores```
 
-- Range: 1-16 threads
+### PowerShell Execution Policy- Recommended: Number of CPU cores```
 
-### 2. Backend Setup- **C++17** - Parallel implementations
 
-### Video Formats
+
+**Issue:** Scripts fail with "cannot be loaded because running scripts is disabled"- Range: 1-16 threads
+
+
+
+**Solution:**### 2. Backend Setup- **C++17** - Parallel implementations
+
+```powershell
+
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser### Video Formats
+
+```
 
 - **Input**: MP4, AVI (MJPEG codec)## Usage
 
+### Compilation Errors
+
 - **Processing**: AVI intermediate format
+
+**Issue:** `g++: command not found` or OpenCV headers missing
 
 - **Output**: MP4 (mp4v codec) for browser compatibility```bash
 
+**Solution (MSYS2 UCRT64):**
+
+```bash
+
+# Install compiler and OpenCV
+
+pacman -S mingw-w64-ucrt-x86_64-gcc## Troubleshooting1. **Upload Video**: Click "Choose Video" and select an MP4 or AVI file
+
+pacman -S mingw-w64-ucrt-x86_64-opencv
 
 
-## Troubleshooting1. **Upload Video**: Click "Choose Video" and select an MP4 or AVI file
 
+# Add to PATH (Windows)
 
+setx PATH "%PATH%;C:\msys64\ucrt64\bin"### PowerShell Execution Policy2. **Select Feature**: Choose from the dropdown menu (e.g., Grayscale, Edge Detection)cd backend### Frontend
 
-### PowerShell Execution Policy2. **Select Feature**: Choose from the dropdown menu (e.g., Grayscale, Edge Detection)cd backend### Frontend
+```
 
 If scripts fail to run:
 
+### Port Already in Use
+
 ```powershell3. **Set Thread Count**: Specify number of threads for Pthread/OpenMP (default: 4)
+
+**Issue:** `Address already in use: Port 5000` or `Port 3000`
 
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-```4. **Process**: Click "Process Video" to start processingpip install -r requirements.txt- **React 18.2** - UI framework
+**Solution:**
 
+```bash```4. **Process**: Click "Process Video" to start processingpip install -r requirements.txt- **React 18.2** - UI framework
 
+# Find process using port (Windows)
+
+netstat -ano | findstr :5000
+
+taskkill /PID <PID> /F
 
 ### Compilation Errors5. **View Results**: 
 
-Ensure MSYS2 UCRT64 is installed:
+# Change port in configuration
 
-```bash   - Watch input and output videos side by side```- **TypeScript** - Type safety
+# Backend: Edit app.py (line: app.run(port=5000))Ensure MSYS2 UCRT64 is installed:
 
-pacman -S mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-opencv
+# Frontend: Edit package.json (add: "start": "vite --port 3001")
 
-```   - Compare Sequential, Pthread, and OpenMP performance
+``````bash   - Watch input and output videos side by side```- **TypeScript** - Type safety
 
 
 
-### Port Already in Use   - Analyze speedup graphs and metrics- **Tailwind CSS** - Styling
+### Video Not Playing in Browserpacman -S mingw-w64-ucrt-x86_64-gcc mingw-w64-ucrt-x86_64-opencv
 
-Change ports in:
+
+
+**Issue:** Video loads but doesn't play or shows black screen```   - Compare Sequential, Pthread, and OpenMP performance
+
+
+
+**Solutions:**
+
+1. **Check browser console** - Look for codec errors
+
+2. **Verify MP4 conversion** - Ensure `outputs/*.mp4` files exist### Port Already in Use   - Analyze speedup graphs and metrics- **Tailwind CSS** - Styling
+
+3. **Test video locally** - Open MP4 file in VLC/media player
+
+4. **Browser compatibility** - Use Chrome/Edge (best support)Change ports in:
+
+5. **Range request issues** - Check backend logs for 416 errors
 
 - Backend: `app.py` (default 5000)
 
+### Performance Issues
+
 - Frontend: `package.json` (default 3000)
+
+**Issue:** Processing is slower than expected or speedup < 2.0x
 
 ### Special Cases**Required Python packages:**- **Recharts** - Performance visualization
 
-### Video Not Playing
+**Solutions:**
 
-- Ensure browser supports MP4 format
+1. **Check CPU usage** - Ensure threads are utilizing cores### Video Not Playing
 
-- Check browser console for errors
+2. **Reduce video size** - Test with smaller resolution/duration
 
-- Verify video file integrity**Scene Detection**: Outputs frame numbers and timestamps of detected scene changes instead of a processed video.- Flask==3.0.0- **Axios** - HTTP client
+3. **Disable background apps** - Free up CPU resources- Ensure browser supports MP4 format
+
+4. **Verify thread count** - Match to physical core count
+
+5. **Check thermal throttling** - Monitor CPU temperature- Check browser console for errors
 
 
 
-## Performance Analysis
+## Performance Analysis- Verify video file integrity**Scene Detection**: Outputs frame numbers and timestamps of detected scene changes instead of a processed video.- Flask==3.0.0- **Axios** - HTTP client
 
 
 
-The application automatically generates:**Large Videos**: Processing time depends on video length and selected feature. Progress updates appear in real-time.- flask-cors==4.0.0
+### Speedup Formula
 
-- Execution time comparison charts
+
+
+```## Performance Analysis
+
+Speedup = Sequential Execution Time / Parallel Execution Time
+
+```
+
+
+
+**Example:**The application automatically generates:**Large Videos**: Processing time depends on video length and selected feature. Progress updates appear in real-time.- flask-cors==4.0.0
+
+- Sequential: 12.5 seconds
+
+- Pthread (4 threads): 4.2 seconds- Execution time comparison charts
+
+- Speedup: 12.5 / 4.2 = 2.98x
 
 - Speedup calculations (Sequential vs Parallel)
 
+### Efficiency Formula
+
 - Parallel efficiency metrics
 
-- FPS (Frames Per Second) statistics## Project Structure- opencv-python==4.10.0.84### Build Tools
+```
+
+Efficiency = Speedup / Number of Threads × 100%- FPS (Frames Per Second) statistics## Project Structure- opencv-python==4.10.0.84### Build Tools
+
+```
 
 
 
-**Speedup Formula**: `Speedup = Sequential Time / Parallel Time`
+**Example:**
+
+- Speedup: 2.98x**Speedup Formula**: `Speedup = Sequential Time / Parallel Time`
+
+- Threads: 4
+
+- Efficiency: 2.98 / 4 = 74.5%
 
 
 
-**Efficiency Formula**: `Efficiency = Speedup / Number of Threads````- **g++ (MSYS2)** - C++ compiler
+### Amdahl's Law**Efficiency Formula**: `Efficiency = Speedup / Number of Threads````- **g++ (MSYS2)** - C++ compiler
 
 
 
-## Contributingparallel_analysis-master/
+```
+
+Speedup_max = 1 / ((1 - P) + P/N)
+
+```## Contributingparallel_analysis-master/
 
 
 
-1. Fork the repository├── backend/                    # Flask API server### 3. Frontend Setup- **OpenMP** - Parallel programming
+Where:
 
-2. Create a feature branch
+- P = Parallelizable portion of code (0.0 to 1.0)
 
-3. Make your changes│   ├── app.py                 # Main Flask application (9 endpoints)
+- N = Number of threads1. Fork the repository├── backend/                    # Flask API server### 3. Frontend Setup- **OpenMP** - Parallel programming
+
+
+
+**Implications:**2. Create a feature branch
+
+- Even with infinite threads, speedup is limited by serial portion
+
+- 90% parallel code (P=0.9) → max speedup = 10x3. Make your changes│   ├── app.py                 # Main Flask application (9 endpoints)
+
+- 95% parallel code (P=0.95) → max speedup = 20x
 
 4. Test thoroughly
 
+## Contributing
+
 5. Submit a pull request│   ├── video_processor.py     # Video processing orchestration```bash- **pthread** - POSIX threads
 
+Contributions are welcome! Please follow these guidelines:
 
 
-## License│   ├── video_converter.py     # AVI to MP4 conversion
 
+1. **Fork the repository**
 
+2. **Create a feature branch** - `git checkout -b feature/new-algorithm`## License│   ├── video_converter.py     # AVI to MP4 conversion
+
+3. **Commit changes** - `git commit -m "Add new algorithm"`
+
+4. **Push to branch** - `git push origin feature/new-algorithm`
+
+5. **Open Pull Request** - Describe changes and test results
 
 This project is for educational purposes. Please ensure proper attribution when using or modifying the code.│   ├── results_parser.py      # Parse C++ execution resultscd frontend
 
+**Development Guidelines:**
+
+- Follow existing code style (C++ and Python)
+
+- Add comments for complex logic
+
+- Test all three implementations (Sequential, Pthread, OpenMP)## Additional Notes│   └── requirements.txt
+
+- Update README if adding new features
 
 
-## Additional Notes│   └── requirements.txt
 
-
+## License
 
 - All C++ programs write execution metrics to text files├── frontend/                   # React web applicationnpm install##  Project Structure
 
+This project is for educational purposes as part of a Parallel and Distributed Computing course. Please ensure proper attribution when using or modifying the code.
+
 - Backend automatically converts AVI outputs to MP4 for web compatibility
+
+## Additional Notes
 
 - Frontend polls backend every 2 seconds for status updates│   ├── src/
 
-- Scene detection outputs text results instead of video files
+- All C++ programs write execution metrics to `.txt` files in the `outputs/` directory
 
-- Performance metrics are calculated on the backend and displayed in real-time│   │   ├── App.tsx            # Main component with state management```
+- Backend automatically converts AVI outputs to MP4 for web browser compatibility- Scene detection outputs text results instead of video files
+
+- Frontend polls backend every 2 seconds for status updates (no WebSocket required)
+
+- Scene detection is the only feature that outputs text results instead of video- Performance metrics are calculated on the backend and displayed in real-time│   │   ├── App.tsx            # Main component with state management```
+
+- Performance metrics are calculated on the backend using wall-clock time
+
+- Video streaming uses HTTP range requests for efficient playback
 
 
 
-## Support│   │   ├── components/        # React components
+## Acknowledgments## Support│   │   ├── components/        # React components
 
 
 
-For issues, bugs, or feature requests, please open an issue in the repository.│   │   │   ├── ConfigPanel.tsx```
+- OpenCV community for computer vision library
+
+- OpenMP and pthread documentation
+
+- React and Flask communitiesFor issues, bugs, or feature requests, please open an issue in the repository.│   │   │   ├── ConfigPanel.tsx```
+
+- Course instructors and TAs
 
 
+
+---
 
 ---│   │   │   ├── ProcessingStatus.tsx
 
+**Built with:** React • TypeScript • Flask • OpenCV • OpenMP • Pthreads
 
+
+
+**Developed for:** Parallel and Distributed Computing Course
 
 **Built with**: React • TypeScript • Flask • OpenCV • OpenMP • Pthreads│   │   │   ├── VideoComparison.tsx**Key dependencies:**parallel_analysis-master/
 
+**Author:** Srujan Swamy
 
+
+
+**Repository:** [https://github.com/SrujanSwamy/Parallel-Video-processing](https://github.com/SrujanSwamy/Parallel-Video-processing)
 
 **Developed for**: Parallel and Distributed Computing Course│   │   │   ├── PerformanceMetrics.tsx
 
